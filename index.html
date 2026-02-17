@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart to do List</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>Smart To Do List</header>
+
+    <section class="task-input">
+        <input type="text" id="taskinput" placeholder="Enter a new task..."/>
+        <input type="date" id="duedate"/>
+        <select id="priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+        </select>
+
+
+        <button id="addTaskbtn">Add Task</button>
+        <label class="theme-toggle">
+            <input type="checkbox" id="darkmodetoggle"/>
+            Dark Mode
+        </label>
+    </section>
+
+    <section class="filters">
+        <input id="search" type="text" placeholder="Search tasks..." />
+
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+     <div class="priority-filter">
+    <button id="priorityBtn" class="filter-btn">
+      Priority
+    </button>
+    <div class="priority-menu hidden">
+      <div data-priority="">All</div>
+      <div data-priority="high">High</div>
+      <div data-priority="medium">Medium</div>
+      <div data-priority="low">Low</div>
+    </div>
+  </div>
+    
+    </section>
+
+    <section class="boards">
+        <div class="board" id="pending">
+            <h2>Pending</h2>
+            <div class="task-list"></div>
+        </div>
+        <div class="board" id="inprogress">
+            <h2>In Progress</h2>
+            <div class="task-list"></div>
+        </div>
+        <div class="board" id="completed">
+            <h2>Completed</h2>
+            <div class="task-list"></div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
